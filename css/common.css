@@ -1,0 +1,203 @@
+/* 공통적으로 쓰는 css */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Karla', 'Noto Sans KR', sans-serif;
+}
+p{ color: #262626; }
+a{ text-decoration: none; color: #262626; }
+button {
+    outline: 0;
+    border: 0;
+    background: none transparent;
+    cursor: pointer;
+    color: inherit;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* aside style sheet */
+aside {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #b4ccd9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999;
+    
+}
+.aside_close:focus {
+    /* transform: translateY(0);
+    opacity: 1;
+    transition: transform .3s .1s; */
+    display: none;
+}
+aside p { 
+    text-align: center; 
+    margin: 10px 0;
+    letter-spacing: -0.7px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+aside button {
+    right: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+aside button img {
+    position: relative;
+    width: 1.25rem;
+}
+
+/* header style sheet */
+header { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid; 
+    grid-template-columns: 8rem 1fr;
+    padding: 0 175px;
+    height: 8.75rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.75rem;
+    
+}
+
+header img {
+    width: 8rem;
+    height: 4rem;
+}
+
+header .main_menu {
+    letter-spacing: -1px;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 500;
+    /* justify-content: space-between; */
+}
+.main_menu .main_nav { 
+    display: flex;
+    flex-grow: 1;
+}
+.main_menu .main_nav a:not(:last-child) { padding-right: 3rem;}
+.main_menu .main_service a:not(:last-child) { padding-right: 3rem;}
+.main_menu .main_icon {
+    padding-left: 3rem;
+    right: 0;
+}
+.main_menu .main_icon a:not(:last-child) { padding-right: 1.75rem;}
+
+/* search_bar style sheet */
+#search_bar {
+    width: 100%;
+    z-index: 95;
+}
+
+/* main */
+/* main_con style sheet */
+
+/* con1 style sheet */
+#con1 { width: 100%; text-align: center; }
+#con1 p { 
+    font-size: 3rem; 
+    line-height: 1.5;
+    letter-spacing: -2.4px;
+    font-weight: 700;
+    padding: 15.625rem 0;
+}
+
+/* con10-news style sheet */
+#con10 {
+    width: 100%;
+}
+#con10 h2 { font-size: 3rem; font-weight: 700; letter-spacing: -2.4px; }
+#const #post_row a{
+    display: flex;
+    flex-direction: row;
+}
+
+/* footer style sheet */
+footer {
+    width: 100%; 
+    background-color: #fafaf8;
+    border-top: 1px solid #b5b5b5;
+}
+
+footer #f_row_top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13.75rem;
+    justify-content: space-between;
+    padding: 4rem 175px;
+}
+
+/* f_row_top style sheet */
+#f_row_top #newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#newsletter > h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: -2.4px;
+    line-height: 3.5rem;
+}
+#newsletter .email_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: solid 1px #c7c7c7;
+    background-color: inherit;
+    width: 100%;
+    height: 70px;
+    padding: 0 2rem;
+}
+#newsletter .email_wrapper input {
+    font-size: 1.125rem;
+    letter-spacing: -0.9px;
+    width: 100%;
+    border: none;
+    background-color: inherit;
+}
+#newsletter .email_wrapper input:focus { outline: 0; }
+#newsletter .email_wrapper i { font-size: 1.125rem;  color: #c7c7c7;}
+
+footer #footer_links { display: flex; justify-content: space-between; }
+footer #footer_links h3 {
+    margin-bottom: 2rem;
+    letter-spacing: -0.9px;
+    font-size: 1.12rem;
+    font-weight: 700;
+}
+footer #footer_links li { letter-spacing: -0.8px; margin-bottom: 0.8rem; }
+
+/* f_low_bottom style sheet */
+footer #f_low_bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #b5b5b5;
+    align-items: center;
+    padding: 2rem 175px;
+}
+footer #f_small a {
+    font-size: 0.75rem;
+    letter-spacing: -0.6px;
+    color: #8c8c8c;
+}
+footer #f_small a:not(:last-child) { padding-right: 4rem; }
+#f_low_bottom > span { font-size: 4.5rem; font-weight: 100; }
