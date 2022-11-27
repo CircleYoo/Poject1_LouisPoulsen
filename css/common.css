@@ -7,7 +7,7 @@
     font-family: 'Karla', 'Noto Sans KR', sans-serif;
 }
 p{ color: #262626; }
-a{ text-decoration: none; color: #262626; }
+a{ text-decoration: none; color: #262626; cursor: pointer;}
 button {
     outline: 0;
     border: 0;
@@ -118,16 +118,114 @@ header .main_menu {
     font-weight: 700;
     padding: 15.625rem 0;
 }
+/* con7 - style sheet */
+#con7 {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 13.625rem;
+    align-items: flex-start;
+    padding: 0 175px;
+
+}
+#con7 h3 { padding-top: 3rem; }
+#con7 #con7_store {
+    font-size: 120px;
+    letter-spacing: -6px;
+    font-weight: 700;
+}
+/* con8 designer - styler sheet */
+
+/* con9 - style sheet */
+#con9 { max-width: 1920px; width: 100%; }
+
+/* con9 video wrapper - style sheet */
+#con9_video_wrapper { position: relative; width: 1920px; height: 1080px;}
+#con9_title { 
+    position: absolute; 
+    text-align: center; 
+    top: 19%; 
+    left: 0; 
+    right: 0;
+    z-index: 1;
+}
+#con9_title img { width: 35% }
+#con9 video { opacity: .85; object-fit: contain; }
+/* con9 article - style sheet */
+#con9_article_wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#con9_article_wrap > div {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+}
+#con9_article_wrap > div:not(:last-child) {
+    border-right: 1px solid #b5b5b5;
+}
+#con9_article_wrap div img { width: 100%; margin-bottom: 1.25rem; }
+#con9_article_wrap div h2 {
+    height: 60px;
+    line-height: 1.25;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    margin-bottom: 1.25rem;
+}
+
+#con9 .con9_art_contents {
+    padding-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+#con9_article_wrap div p {
+    font-size: 0.875rem;
+    letter-spacing: -0.7px;
+    font-weight: 400;
+}
+#con9_article_wrap div #con9_more { 
+    font-weight: 700;
+    position: absolute;
+    top: 150%;
+    font-size: 0.875rem;
+    letter-spacing: -0.7px;
+    font-weight: 700;
+}
+#con9_article_wrap div:hover { background-color: #e6e6e6; transition: all .15s; }
+#con9_article_wrap div:hover #con9_more{ top: 80%; transition: all .35s; }
+
 
 /* con10-news style sheet */
-#con10 {
-    width: 100%;
+#con10 { width: 100%; margin-bottom: 50px; }
+
+#con10 #con10_title {
+    border-top: 1px solid #b5b5b5; 
+    border-bottom: 1px solid #b5b5b5; 
 }
-#con10 h2 { font-size: 3rem; font-weight: 700; letter-spacing: -2.4px; }
-#const #post_row a{
-    display: flex;
-    flex-direction: row;
+#con10 h2 { 
+    font-size: 3rem; 
+    font-weight: 700; 
+    letter-spacing: -2.4px;  
+    margin: 3rem 40px; 
 }
+#con10 .post_row:not(:last-child) { 
+    border-bottom: 1px solid #b5b5b5; 
+}
+#con10 .post_row:not(:last-child):hover { 
+    border-bottom: 1px solid #262626;
+}
+#con10 .post_row a{
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr 132px;
+    align-items: center;
+    height: 6.25rem;
+    margin: 0 40px ; 
+}
+#con10 .post_row a span { letter-spacing: -1.2px; font-size: 1.5rem }
+#con10 .post_row a h3 { letter-spacing: -1.8px; font-size: 1.75rem; font-weight: 400;}
+#con10 .post_row a img {display: none; }
+#con10 .post_row a:hover img { display: block; }
+
 
 /* footer style sheet */
 footer {
@@ -139,7 +237,7 @@ footer {
 footer #f_row_top {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 13.75rem;
+    gap: 9rem;
     justify-content: space-between;
     padding: 4rem 175px;
 }
