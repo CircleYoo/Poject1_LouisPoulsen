@@ -14,8 +14,9 @@
     <link rel="shortcut icon" sizes="16x16" href="img/logo.png" type="image/x-icon">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <!-- 슬라이드 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
-    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css"> -->
+
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/common.css">
     <title>louis poulsen</title>
 </head>
@@ -144,38 +145,79 @@
         </section>
         <section id="con2">
             <div class="con2_img_wrapper">
-                <div class="con2_imgIn" id="con2_img_1">
-                    <div class="con2_imgIn_img">
-                        <div class="con2_img_silde">
-                            <a href=""><img src="img/con2/con2-palerose-4.jpg" alt=""></a>
+                <div class="con2_imgIn main_swiper" id="con2_img_1">
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-1.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-1.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-1.jpg" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="con2_imgIn" id="con2_img_2">
-                    <div class="con2_imgIn_img">
-                        <div class="con2_img_silde">
-                            <a href=""><img src="img/con2/con2-palerose-1.jpg" alt=""></a>
+                <div class="con2_imgIn sub_swiper2" id="con2_img_2" >
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-2.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-2.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-2.jpg" alt="">
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="con2_imgIn" id="con2_img_3">
-                    <div class="con2_imgIn_img">
-                        <div class="con2_img_silde">
-                            <a href=""><img src="img/con2/con2-palerose-3.jpg" alt=""></a>
+                <div class="con2_imgIn sub_swiper3" id="con2_img_3">
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-3.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-3.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-3.jpg" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="con2_imgIn" id="con2_img_4">
-                    <div class="con2_imgIn_img">
-                        <div class="con2_img_silde">
-                            <a href=""><img src="img/con2/con2-palerose-5.jpg" alt=""></a>
+                <div class="con2_imgIn sub_swiper4" id="con2_img_4">
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-4.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-4.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-4.jpg" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="con2_imgIn" id="con2_img_5">
-                    <div class="con2_imgIn_img">
-                        <div class="con2_img_silde">
-                            <a href=""><img src="img/con2/con2-palerose-2.jpg" alt=""></a>
+                <div class="con2_imgIn sub_swiper5" id="con2_img_5">
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-5.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-5.jpg" alt="">
+                            </a>
+                            <a href="" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-5.jpg" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -186,13 +228,25 @@
                 </h2>
             </div>
             <div id="con2_productNm">
-                <a href="">Exclusive PH Pale Rose</a>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">Exclusive PH Pale Rose</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">The Panthella Family</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">PH Limited Edition 2022</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button id="con2_prev" type="button">
+            <button class="swiper-button-prev" id="con2_prev" type="button">
                 <p>prev</p>
                 <img src="img/con2/con2-prev-arrow.svg" alt="">
             </button>
-            <button id="con2_next" type="button">
+            <button class="swiper-button-next" id="con2_next" type="button">
                 <p>next</p>
                 <img src="img/con2/con2-next-arrow.svg" alt="">
             </button>
@@ -240,7 +294,7 @@
                 <div>
                     <h2>거실 조명에 추천하고픈 클래식한 조명</h2>
                     <p>
-                        루이스폴센은 사람들과 공간을 아름답게 만들어주는 최고의 분위기를 자아내기 위해 노력합니다. 현대의 램프 덕분에 자연광이 얼마나 들어오느냐에 관계 없이<br> 완벽한 분위기와 아름다운 생활을 연출합니다.
+                        루이스폴센은 사람들과 공간을 아름답게 만들어주는 최고의 분위기를 자아내기 위해 노력합니다. 현대의 램프 덕분에 자연광이 얼마나 들어오느냐에 관계 없이 완벽한 분위기와 아름다운 생활을 연출합니다.
                     </p>
                     <button type="button">더 보러가기</button>
                 </div>
@@ -462,8 +516,11 @@
         </section>
     </footer>
 
+    <!-- jQuery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+
+    <script src="js/con2-swiper.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

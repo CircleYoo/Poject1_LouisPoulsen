@@ -79,7 +79,7 @@
 
         objImg.src = imgArr[imgIdx++];
         if(imgArr.length === imgIdx) { imgIdx = 0; }
-    }, 1500);
+    }, 1000);
 
     
     // con7 store - mouseover

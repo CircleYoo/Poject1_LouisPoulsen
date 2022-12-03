@@ -170,7 +170,14 @@ input::-webkit-search-results-decoration{
 #search_bar button i:hover { color: rgb(112, 112, 112); transition: all 0.15s;}
 
 /* section Cart style sheet */
-
+/* #cart_wrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+*/
 .cart_overlay {
     width: 100vw;
     height: 100vh;
@@ -278,7 +285,7 @@ input::-webkit-search-results-decoration{
     letter-spacing: -1px;
     padding: 1.25rem 0;
 }
-#cart_buy button:hover { background-color: #ede8de; color: #262626; transition: all 0.25s;}
+#cart_buy button:hover { background-color: #ede8de; color: #262626; }
 /* main */
 /* main_con style sheet */
 
@@ -346,44 +353,43 @@ main #main_png img {  object-fit: cover; height: 320px; }
     width: 100vw;
     height: 100vh;
 }
-/* #con2_img_wrapper {
+#con2_img_wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-} */
+}
 .con2_imgIn { position: absolute; overflow: hidden; }
 #con2_img_1 {
-    width: 21.875rem;
-    height: 21.875rem;
-    top: 50vh;
+    width: 350px;
+    height: 350px;
+    top: 488px;
     left: 0;
 }
 #con2_img_2 { 
-    width: 30rem;
-    height: 47.5rem;
+    width: 485px;
+    height: 760px;
     top: 0;
-    left: calc(50vw - 30rem);
+    left: 485px;
 }
 #con2_img_3 {
-    width: 10.938rem;
-    height: 15rem;
-    top: 7.5rem;
-    left: calc(50vw + 9rem)
+    width: 175px;
+    height: 240px;
+    top: 120px;
+    left: 1105px;
 }
 #con2_img_4 {
-    width: 19rem;
-    height: 19rem;
+    width: 310px;
+    height: 310px;
     bottom: 0;
-    left: calc(50vw + 9rem)
+    left: 1105px;
 }
 #con2_img_5 {
-    width: 30rem;
-    height: 19rem;
-    top: 17.5rem;
-    /* left: 89rem; */
-    right: 0;
+    width: 485px;
+    height: 310px;
+    top: 280px;
+    left: 1435px;
 }
 
 /* swiper.css (이동) */
@@ -403,12 +409,10 @@ main #main_png img {  object-fit: cover; height: 320px; }
 #con2_slogan h2 { font-weight: 800; letter-spacing: -2px; font-size: 2.5rem; }
 
 #con2_productNm { 
-    position: absolute;
-    top: calc(50vh - 15rem);
-    right: calc(50vw + 35rem);
-    width: 10rem;
-    height: 15rem;
-    overflow: hidden;
+    position: relative;
+    top: calc(50vh - 14rem);
+    left: calc(50vw - 46rem);
+    width: 100%;
 }
 
 #con2_productNm a{ 
@@ -417,9 +421,19 @@ main #main_png img {  object-fit: cover; height: 320px; }
     font-weight: 700; 
     transform: rotate(-90deg);
     position: absolute;
-    top: 3rem;
+    top: 0;
+    left: 0;
 }
-
+#con2_productNm #productNm2 {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+#con2_productNm #productNm3 {
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+}
 #con2 button {
     font-size: 1.5rem; 
     letter-spacing: -1.2px; 
@@ -515,7 +529,7 @@ main #main_png img {  object-fit: cover; height: 320px; }
     padding-bottom: 1.25rem;
 }
 .con4_art button{ 
-    width: 15rem; height: 3rem; 
+    width: 240px; height: 40px; 
     background-color: #333;
     color: #fff; 
     letter-spacing: -0.7px;
