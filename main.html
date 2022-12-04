@@ -97,7 +97,7 @@
                                 <span id="counter">1</span>
                                 <button id="decrease">-</button>
                             </div>
-                            <p>2,624,000<small>원</small></p>
+                            <p id="list_total">2,624,000<small>원</small></p>
                         </div>
                     </div>
                 </div>
@@ -255,30 +255,36 @@
             <div id="con3_text">
                 <h1>Explore our categories</h1>
                 <ul>
-                    <a href=""><li>팬던트</li></a>
-                    <a href=""><li>플로어 램프</li></a>
-                    <a href=""><li>테이블 램프</li></a>
-                    <a href=""><li>월 램프</li></a>
-                    <a href=""><li>야외 램프</li></a>
-                    <a href=""><li>예비 부품 찾기</li></a>
+                    <a href="" id="con3_li_1"><li><span>팬던트</span></li></a>
+                    <a href="" id="con3_li_2"><li><span>플로어 램프</span></li></a>
+                    <a href="" id="con3_li_3"><li><span>테이블 램프</span></li></a>
+                    <a href="" id="con3_li_4"><li><span>월 램프</span></li></a>
+                    <a href="" id="con3_li_5"><li><span>야외 램프</span></li></a>
+                    <a href="" id="con3_li_6"><li><span>예비 부품 찾기</span></li></a>
                 </ul>
             </div>
             <div class="con3_product">
-                <div id="con3_product_1">
-                    <img src="img/con3/con3-01-01.png" alt="">
-                    <div class="con3_desc">
-                        <p>PH 3½-3 Pale Rose Brass Pendant</p>
-                        <p>₩ 2,624,000</p>
+                <div id="con3_product_left">
+                    <div class="con3_product">
+                        <img src="img/con3/con3-01-01.png" alt="">
+                        <div class="con3_desc">
+                            <p id="con3_name_left">PH 3½-3 Pale Rose Brass Pendant</p>
+                            <p id="con3_price_left">₩ 2,624,000</p>
+                        </div>
                     </div>
+
                 </div>
-                <div id="con3_product_2">
-                    <img src="img/con3/con3-01-02.png" alt="">
-                    <div class="con3_desc">
-                        <p>PH Artichoke</p>
-                        <p>₩ 19,900,000</p>
+                <div id="con3_product_right">
+                    <div class="con3_product">
+                        <img src="img/con3/con3-01-02.png" alt="">
+                        <div class="con3_desc">
+                            <p id="con3_name_right">PH Artichoke</p>
+                            <p id="con3_price_right">₩ 19,900,000</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </section>
         <section id="con4">
             <div class="con4_art" id="con4_art_1">
@@ -304,25 +310,25 @@
             <div id="con5_text">
                 <h2>New arrivals from <br>Louis Poulsen</h2>
                 <ul>
-                    <li>
+                    <li id="con5_li_1">
                         <a href="">PH 2/1 Pale Rose Brass Table</a><small>Exclusive</small>
                     </li>
-                    <li>
+                    <li id="con5_li_2">
                         <a href="">Panthella Portable V2</a><small>New Color</small>
                     </li>
-                    <li>
+                    <li id="con5_li_3">
                         <a href="">NJP Mini</a><small>Limitied Edition</small>
                     </li>
-                    <li>
+                    <li id="con5_li_4">
                         <a href="">Moonsetter</a><small>New</small>
                     </li>
-                    <li>
+                    <li id="con5_li_5">
                         <a href="">VL Studio Wall</a><small>New Color</small>
                     </li>
                 </ul>
             </div>
             <div class="con5_img_wrapper">
-                <img src="img/con5/con5-01.jpg" alt="">
+                <img src="img/con5/con5-01.jpg" alt="" id="con5_img_1">
             </div>
         </section>
         <section id="con6">
@@ -469,11 +475,14 @@
                 <h1>조명에 대한 영감을 주는 <br>
                     뉴스레터가 필요하신가요?
                 </h1>
-                <div class="email_wrapper">
-                    <input type="email" placeholder="What's your email?">
-                    <button type="button">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                <div>
+                    <div class="email_wrapper">
+                        <input type="email" placeholder="What's your email?">
+                        <button type="button">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <p id="email_submit">Thanks for submitting!</p>
                 </div>
             </div>
             <div id="footer_links">

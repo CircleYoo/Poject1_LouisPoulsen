@@ -58,7 +58,28 @@
         $cartTap.classList.toggle('cart_active')
         body.classList.toggle('scrollLock');   
     })
+    // 장바구니 버튼
+    const COUNTER = document.getElementById('counter');
+    const INCREASE = document.getElementById('increase');
+    const DECREASE = document.getElementById('decrease');
+    const $listTotal = document.getElementById('list_total');
+    
+    console.log(COUNTER)
+    let num = (parseInt(COUNTER.innerHTML));
 
+    function render() {
+        COUNTER.innerHTML = num;
+    }
+
+    INCREASE.addEventListener ('click', function() {
+        num = num + 1;
+        render();
+    })
+
+    DECREASE.addEventListener ('click', function() {
+        num = num - 1;
+        render();
+    })
     // main title 글자 색 + 이미지 변경
     const shapeColor = document.querySelector('#shape');
     const objImg = document.querySelector('#main_png > img')
@@ -81,7 +102,147 @@
         if(imgArr.length === imgIdx) { imgIdx = 0; }
     }, 1000);
 
+
+    // con3 categories - mouseover
+    const $con3LeftImg = document.querySelector('#con3_product_left .con3_product img');
+    const $con3RightImg = document.querySelector('#con3_product_right .con3_product img');
+    const $con3LeftNm = document.querySelector('#con3_name_left')
+    const $con3RightNm = document.querySelector('#con3_name_right')
+    const $con3LeftPrice = document.querySelector('#con3_price_left')
+    const $con3RightPrice = document.querySelector('#con3_price_right')
+
+    const cateList2 = document.querySelector('#con3_li_2 li span');
+    const cateList3 = document.querySelector('#con3_li_3 li span');
+    const cateList4 = document.querySelector('#con3_li_4 li span');
+    const cateList5 = document.querySelector('#con3_li_5 li span');
+    const cateList6 = document.querySelector('#con3_li_6 li span');
+
+    function cateList1() {
+        $con3LeftImg.src = 'img/con3/con3-01-01.png';
+        $con3RightImg.src = 'img/con3/con3-01-02.png';
+        $con3LeftNm.innerText = 'PH 3½-3 Pale Rose Brass Pendant';
+        $con3RightNm.innerText = 'PH Artichoke';
+        $con3LeftPrice.innerText = '₩ 2,624,000';
+        $con3RightPrice.innerText = '₩ 19,900,000';
+    };
+
+    cateList2.addEventListener('mouseenter', () => {
+        $con3LeftImg.src = 'img/con3/con3-02-01.png';
+        $con3RightImg.src = 'img/con3/con3-02-02.png';
+        $con3LeftNm.innerText = 'VL Studio Table/Floor'
+        $con3RightNm.innerText = 'Moonsetter'
+        $con3LeftPrice.innerText = '₩ 611,000'
+        $con3RightPrice.innerText = '₩ 12,314,000'
+    })
+    cateList2.addEventListener('mouseleave', () => {
+        cateList1();
+    })
     
+    cateList3.addEventListener('mouseenter', () => {
+        $con3LeftImg.src = 'img/con3/con3-03-01.png';
+        $con3RightImg.src = 'img/con3/con3-03-02.png';
+        $con3LeftNm.innerText = 'Panthella Table 320';
+        $con3RightNm.innerText = 'AJ Mini Table';
+        $con3LeftPrice.innerText = '₩ 513,000';
+        $con3RightPrice.innerText = '₩ 1,338,000';
+    })
+    cateList3.addEventListener('mouseleave', () => {
+        cateList1();
+    })
+    
+    cateList4.addEventListener('mouseenter', () => {
+        $con3LeftImg.src = 'img/con3/con3-04-01.png';
+        $con3RightImg.src = 'img/con3/con3-04-02.png';
+        $con3LeftNm.innerText = 'Flindt Wall';
+        $con3RightNm.innerText = 'NJP Wall';
+        $con3LeftPrice.innerText = '₩ 1,111,000';
+        $con3RightPrice.innerText = '₩ 580,000';
+    })
+    cateList4.addEventListener('mouseleave', () => {
+        cateList1();
+    })
+    
+    cateList5.addEventListener('mouseenter', () => {
+        $con3LeftImg.src = 'img/con3/con3-05-01.png';
+        $con3RightImg.src = 'img/con3/con3-05-02.png';
+        $con3LeftNm.innerText = 'Toldbod 6.1 Wall';
+        $con3RightNm.innerText = 'Nyhavn Wall';
+        $con3LeftPrice.innerText = '₩ 989,000';
+        $con3RightPrice.innerText = '₩ 2,742,000';
+    })
+    cateList5.addEventListener('mouseleave', () => {
+        cateList1();
+    })
+    
+    cateList6.addEventListener('mouseenter', () => {
+        $con3LeftImg.src = 'img/con3/con3-06-01.png';
+        $con3RightImg.src = 'img/con3/con3-06-02.png';
+        $con3LeftNm.innerText = 'PH 3½-2½ GLASS Shade';
+        $con3RightNm.innerText = 'Albertslund LED Upgrade Kit';
+        $con3LeftPrice.innerText = '₩ 1,684,000';
+        $con3RightPrice.innerText = '₩ 989,000';
+    })
+    cateList6.addEventListener('mouseleave', () => {
+        cateList1();
+    })
+
+
+
+    // con5 new arrivals - mouseover
+    const $con5 = document.querySelector('#con5');
+    const $con5Img = document.querySelector('.con5_img_wrapper img');
+    const newList1 = document.querySelector('#con5_li_1 a');
+    const newList2 = document.querySelector('#con5_li_2 a');
+    const newList3 = document.querySelector('#con5_li_3 a');
+    const newList4 = document.querySelector('#con5_li_4 a');
+    const newList5 = document.querySelector('#con5_li_5 a');
+
+    newList1.addEventListener('mouseenter', () => {
+        $con5.style.backgroundColor = "#f9d0d0";
+    })
+    newList1.addEventListener('mouseleave', () => {
+        $con5.style.backgroundColor = "";
+    })
+
+    newList2.addEventListener('mouseenter', () => {
+        $con5.style.backgroundColor = "#b4ccd9";
+        $con5Img.src = 'img/con5/con5-02.jpg';
+        
+    })
+    newList2.addEventListener('mouseleave', () => {
+        $con5.style.backgroundColor = "";
+        $con5Img.src = 'img/con5/con5-01.jpg';
+    })
+
+    newList3.addEventListener('mouseenter', () => {
+        $con5.style.backgroundColor = "#a14102";
+        $con5Img.src = 'img/con5/con5-03.jpg';
+    })
+    newList3.addEventListener('mouseleave', () => {
+        $con5.style.backgroundColor = "";
+        $con5Img.src = 'img/con5/con5-01.jpg';
+    })
+
+    newList4.addEventListener('mouseenter', () => {
+        $con5.style.backgroundColor = "#f8f8fa";
+        $con5Img.src = 'img/con5/con5-04.jpg';
+    })
+    newList4.addEventListener('mouseleave', () => {
+        $con5.style.backgroundColor = "";
+        $con5Img.src = 'img/con5/con5-01.jpg';
+    })
+
+    newList5.addEventListener('mouseenter', () => {
+        $con5.style.backgroundColor = "#702920";
+        $con5Img.src = 'img/con5/con5-05.jpg';
+    })
+    newList5.addEventListener('mouseleave', () => {
+        $con5.style.backgroundColor = "";
+        $con5Img.src = 'img/con5/con5-01.jpg';
+    })
+
+
+
     // con7 store - mouseover
     const $store = document.querySelectorAll('#con7_store > a')
 
@@ -96,4 +257,19 @@
         })
     }
 
+    // 뉴스레터 전송 버튼
+    const $newsInput = document.querySelector('.email_wrapper input[type="email"]');
+    const $newsBtn = document.querySelector('.email_wrapper > button');
+    const $newsAlert = document.querySelector('#email_submit')
+
+    $newsBtn.addEventListener('click', e => {
+        $newsInput.value = '';
+        $newsAlert.style.display = 'block';
+    })
+
+    setInterval(() => {
+        if($newsAlert.style.display = 'block') {
+            $newsAlert.style.display = 'none'
+        }
+    }, 5000);
 })();

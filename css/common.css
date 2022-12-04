@@ -26,6 +26,14 @@ button {
     text-align: center;
     text-decoration: none;
 }
+::-moz-selection {
+    background: #262626;
+    color: #fff;
+}
+::selection {
+    background: #262626;
+    color: #fff;
+}
 .scrollLock { overflow: hidden; }
 
 /* header-con style sheet */
@@ -450,7 +458,7 @@ main #main_png img {  object-fit: cover; height: 320px; }
 
 /* con3 : product - style sheet */
 #con3 { 
-    margin: 9.375rem 9.1146vw; 
+    margin: 9.375rem 9vw; 
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 7.8125vw;
@@ -469,20 +477,40 @@ main #main_png img {  object-fit: cover; height: 320px; }
 #con3_text ul li {
     margin-top: 1.2rem;
     letter-spacing: -3px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
-#con3_text ul a:hover { text-decoration: underline; }
+#con3_text ul a span { display:inline-block; text-transform:uppercase; }
+#con3_text ul a span::after { 
+    display:block;
+    content: '';
+    border-bottom: solid 2px #262626;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+#con3_text ul a:hover span::after{ 
+    transform: scaleX(1); 
+    transform-origin:  0% 50%;
+}
 
 .con3_product { 
     display: grid;
     grid-template-columns: repeat(2, minmax(500px, 1fr));
     gap: 1.25rem;
 }
-.con3_product > div { 
+#con3_product_left,
+#con3_product_right { 
     background-color: #fafaf8;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+#con3_product_left > div,
+#con3_product_right > div {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.25s;
 }
 .con3_product .con3_desc { 
     display: flex; 
@@ -526,13 +554,13 @@ main #main_png img {  object-fit: cover; height: 320px; }
 #con4_art_1 { padding-right: 8.5rem; }
 #con4_art_1 h2, 
 #con4_art_1 p, 
-#con4_art_1 button { margin-left: 9.1146vw; }
+#con4_art_1 button { margin-left: 9vw; }
 
 #con4_art_2 { text-align: right; }
 #con4_art_2 h2, 
 #con4_art_2 p, 
 #con4_art_2 button { 
-    margin-right: 9.1146vw; 
+    margin-right: 9vw; 
     margin-left: 12.5rem;
 }
 #con4_art_2 img { margin-bottom: 6.25rem; }
@@ -544,21 +572,43 @@ main #main_png img {  object-fit: cover; height: 320px; }
     grid-template-columns: repeat(2, 50%);
     margin-bottom: 9.375rem;
     padding: 9.375rem 0;
+    transition: all 0.25s ease-in-out; 
 }
 #con5 #con5_text {
-    margin-left: 9.1146vw; margin-right: 20.625rem;
+    margin-left: 9vw; margin-right: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    }
+}
+
 #con5 h2 { font-size: 5rem; font-weight: 700; letter-spacing: -6px; }
-#con5 ul li { font-size: 1.75rem; letter-spacing: -1.4px; margin-top: 2rem;}
-#con5 ul li small { font-size: 1.125rem; letter-spacing: -0.9px; padding-left: 1.75rem;}
+#con5 ul li { font-size: 1.75rem; letter-spacing: -1.4px; padding-top: 1.2rem; }
+#con5 ul li small { 
+    font-size: 1.125rem; 
+    letter-spacing: -0.9px; 
+    padding-left: 1.75rem; 
+    color: #262626;
+}
+#con5 ul li a  { display:inline-block; text-transform:uppercase; }
+#con5 ul li a::after { 
+    display:block;
+    content: '';
+    border-bottom: solid 2px #262626;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+#con5 ul li:hover a::after{    
+    transform: scaleX(1); 
+    transform-origin:  0% 50%;
+}
+.con5_img_wrapper { height: 780px;  position: relative;}
+.con5_img_wrapper img {
+    position: absolute;
+    object-fit: contain;  
+    height: 780px;  
+    transition: all 0.25s ease-in-out; 
+}
 
-#con5 ul li:hover a{ text-decoration: underline;}
-
-.con5_img_wrapper { height: 780px; }
-.con5_img_wrapper img {object-fit: contain; height: 780px;}
 
 /* con6 : let light~ - style sheet */
 #con6 { 
@@ -570,7 +620,6 @@ main #main_png img {  object-fit: cover; height: 320px; }
     margin-bottom: 9.375rem;
 }
 
-
 #con6 h2 { 
     font-size: 5rem; 
     letter-spacing: -4px;
@@ -580,6 +629,7 @@ main #main_png img {  object-fit: cover; height: 320px; }
 
 #con6 div { width: 69rem; }
 #con6 video{ width: 100%; object-fit: fill; }
+
 
 /* con7 : store - style sheet */
 #con7 {
@@ -737,7 +787,7 @@ footer #f_row_top {
     grid-template-columns: 1fr 1fr;
     gap: 9rem;
     justify-content: space-between;
-    padding: 4rem 175px;
+    padding: 4rem 9vw;
 }
 
 /* f_row_top style sheet */
@@ -773,6 +823,14 @@ footer #f_row_top {
 }
 #newsletter .email_wrapper input:focus { outline: 0; }
 #newsletter .email_wrapper i { font-size: 1.125rem;  color: #c7c7c7;}
+#newsletter p { 
+    letter-spacing: -0.9px; 
+    color: #595959;
+    padding: 0.5rem;
+    position: absolute;
+    display: none;
+}
+
 
 footer #footer_links { display: flex; justify-content: space-between; }
 footer #footer_links h3 {
@@ -789,7 +847,7 @@ footer #f_low_bottom {
     justify-content: space-between;
     border-top: 1px solid #b5b5b5;
     align-items: center;
-    padding: 2rem 175px;
+    padding: 2rem 9vw;
 }
 footer #f_small a {
     font-size: 0.625vw;
