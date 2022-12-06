@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="css/mq-1024.css">
-    <!-- <link rel="stylesheet" media="screen and (max-width:786px)" href="css/mq-768.css"> -->
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mq-768.css">
     <title>louis poulsen</title>
 </head>
 <body>
@@ -59,6 +59,7 @@
                         <img src="img/header/header-xBtn.svg" class="header_xBtn" >
                     </button>
                     <button><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button><i class="fa-solid fa-bars"></i></button>
                 </div>
             </div>
         </header>
@@ -95,9 +96,13 @@
                         </div>
                         <div id="cart_list_cnt">
                             <div id="cart_list_btn">
-                                <button id="increase">+</button>
+                                <button id="increase">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
                                 <span id="counter">1</span>
-                                <button id="decrease">-</button>
+                                <button id="decrease">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
                             </div>
                             <p id="list_total">2,624,000<small>원</small></p>
                         </div>
@@ -138,6 +143,10 @@
             <div id="main_png">
                 <img src="img/main/main-01.png" alt="">
             </div>
+            <span id="title_mobile">
+                Once you have experienced good lighting,<br>
+                life is filled with new values
+            </span>
         </section>
         <section id="con1">
             <p>
@@ -247,10 +256,12 @@
             <button class="swiper-button-prev" id="con2_prev" type="button">
                 <p>prev</p>
                 <img src="img/con2/con2-prev-arrow.svg" alt="">
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
             <button class="swiper-button-next" id="con2_next" type="button">
                 <p>next</p>
                 <img src="img/con2/con2-next-arrow.svg" alt="">
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
         </section>
         <section id="con3">
