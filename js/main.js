@@ -64,7 +64,6 @@
     const DECREASE = document.getElementById('decrease');
     const $listTotal = document.getElementById('list_total');
     
-    console.log(COUNTER)
     let num = (parseInt(COUNTER.innerHTML));
 
     function render() {
@@ -80,6 +79,24 @@
         num = num - 1;
         render();
     })
+
+    // 모바일 메뉴
+    const $hamBtn = document.querySelector('#mobile_btn');
+    const $mobileXBtn = document.querySelector('.main_icon .fa-xmark');
+    const $mobileTap = document.querySelector('#mobile_menu');
+
+
+    $hamBtn.addEventListener('click', () => {
+        $mobileTap.classList.toggle('mobile_menu_active')
+        body.classList.toggle('scrollLock');  
+    })
+
+    // $mobileXBtn.addEventListener('click', () => {
+    //     $mobileTap.classList.toggle('mobile_menu_active')
+    //     body.classList.toggle('scrollLock');  
+    // })
+
+
     // main title 글자 색 + 이미지 변경
     const shapeColor = document.querySelector('#shape');
     const objImg = document.querySelector('#main_png > img')

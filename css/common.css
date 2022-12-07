@@ -5,11 +5,12 @@
     list-style: none;
     box-sizing: border-box;
     font-family: 'Karla', 'Noto Sans KR', sans-serif;
+    scroll-behavior: smooth;
 }
 body { 
     overflow-x: hidden;
     position: relative;     
-    transition: 0.35s;
+    transition: 0.35s ease-in-out;
     -webkit-transition: 0.35s;
     -moz-transition: 0.35s;  
 }
@@ -28,11 +29,11 @@ button {
     text-decoration: none;
 }
 ::-moz-selection {
-    background: #262626;
+    background: #ea5b0c;
     color: #fff;
 }
 ::selection {
-    background: #262626;
+    background: #b4ccd9;
     color: #fff;
 }
 .scrollLock { overflow: hidden; }
@@ -56,6 +57,7 @@ aside {
     justify-content: center;
     text-align: center;
     visibility: visible;
+    z-index: 3;
 }
 
 aside p { 
@@ -117,7 +119,20 @@ header .main_menu .main_icon button .header_xBtn {
     left: -10px;
     width: 40px;
 }
-header .main_menu .main_icon button .fa-bars {display: none}
+header .main_menu .main_icon button .fa-bars { 
+    display: none; 
+    padding-bottom: 3px; 
+}
+header .main_menu .main_icon button .fa-xmark { 
+    /* display: none;  */
+    /* position: absolute;  */
+    /* top: -12px;  */
+    font-size: 1.5rem;
+    padding-bottom: 3px; 
+    /* left: 2.5px; 
+    padding-right: 3.5vw;  */
+}
+
 /* header 스크롤 */
 header.scrolled {
     height: 4rem;
@@ -162,7 +177,10 @@ header.scrolled {
     background: none transparent;
     outline: 0;
     border: 0;
-    color: #fff; font-size: 2rem; font-weight: 100; letter-spacing: -1.8px;
+    color: #fff; 
+    font-size: 2rem; 
+    font-weight: 100; 
+    letter-spacing: -1.8px;
     flex-grow: 1;
 }
 
@@ -179,8 +197,8 @@ input::-webkit-search-results-decoration{
 #search_bar button i{ font-size: 2rem; }
 #search_bar button i:hover { color: rgb(112, 112, 112); transition: all 0.15s;}
 
-/* section Cart style sheet */
 
+/* section Cart style sheet */
 .cart_overlay {
     width: 100vw;
     height: 100vh;
@@ -261,7 +279,10 @@ input::-webkit-search-results-decoration{
 }
 #cart_text h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -1.2px;}
 #cart_text p { 
-    font-size: 0.75rem; font-weight: 300; letter-spacing: -0.6px; color: #666;
+    font-size: 0.75rem; 
+    font-weight: 300; 
+    letter-spacing: -0.6px; 
+    color: #666;
 }
 #cart_text button i { font-size: 1.25rem; color: #aeada9; }
 
@@ -277,12 +298,15 @@ input::-webkit-search-results-decoration{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 2.5rem;
-
 }
 #cart_buy_info p { font-size: 2rem; font-weight: 700; letter-spacing: -1.5px;}
 
 #cart_buy_info h2,
-#cart_buy_info small { font-size: 1.25rem; font-weight: 400; letter-spacing: -1px; }
+#cart_buy_info small { 
+    font-size: 1.25rem; 
+    font-weight: 400; 
+    letter-spacing: -1px; 
+}
 
 #cart_buy button { 
     background-color: #262626;
@@ -291,8 +315,13 @@ input::-webkit-search-results-decoration{
     letter-spacing: -1px;
     padding: 1.25rem 0;
 }
-#cart_buy button:hover { background-color: #ede8de; color: #262626; transition: all 0.25s;}
+#cart_buy button:hover { 
+    background-color: #ede8de; 
+    color: #262626; 
+    transition: all 0.25s;
+}
 
+#mobile_menu {display: none}
 
 /* main */
 /* main_con style sheet */
@@ -319,7 +348,8 @@ main .title_row > span {
     letter-spacing: -0.1rem;
     color: #595959;
 }
-main .title_row > img { width: 5rem; height: 5rem; }
+main .title_row a { width: 5rem; }
+/* main .title_row > img { width: 5rem; height: 5rem; } */
 main .main_title_text {
     font-size: 13vw;
     font-weight: 700;
@@ -397,7 +427,7 @@ main #title_mobile { display: none;}
 #con2_img_4 {
     /* width: 19rem; */
     width: 16vw;
-    height: 19rem;
+    height: 16vw;
     bottom: 0;
     left: calc(50vw + 9rem)
 }
@@ -595,7 +625,7 @@ main #title_mobile { display: none;}
     transition: all 0.25s ease-in-out; 
 }
 #con5 #con5_text {
-    margin-left: 9vw; margin-right: 16vw;
+    margin-left: 9vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -607,9 +637,10 @@ main #title_mobile { display: none;}
     font-weight: 700; 
     line-height: 1.2; 
 }
-#con5 ul li { font-size: 1.46vw; letter-spacing: -1.4px; padding-top: 1.2rem; }
+#con5 ul li { font-size: 1.75rem; letter-spacing: -1.4px; padding-top: 1.2rem; }
 #con5 ul li small { 
-    font-size: 1vw; 
+    /* font-size: 1vw;  */
+    font-size: 0.75em;
     letter-spacing: -0.9px; 
     padding-left: 1.46vw; 
     color: #262626;
@@ -685,7 +716,6 @@ main #title_mobile { display: none;}
     gap: 1.25rem;
     padding: 0 2.5rem;
     margin-bottom: 9.375rem;
-
 }
 #con8 h3 { font-size: 2.25rem; letter-spacing: -1.8px; font-weight: 700;}
 

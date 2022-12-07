@@ -48,6 +48,11 @@
 		},
 		loop: true
 	})
+	
+	// textSwiper.controller.control = textSwiper;
+	// MainSwiper.controller.control = MainSwiper;
+
+
 	// MainSwiper.controller.control = SubSwiper2;
 	// MainSwiper.controller.control = SubSwiper3;
 	// MainSwiper.controller.control = SubSwiper4;

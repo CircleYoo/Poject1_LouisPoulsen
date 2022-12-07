@@ -66,8 +66,8 @@ main #main_png {
     left: calc(50vw + 4rem);
 }
 #con2_img_4 {
-    width: 16vw;
-    height: 10.25rem;
+    /* width: 16vw; */
+    /* height: 10.25rem; */
     bottom: 0;
     left: calc(50vw + 4rem);
 }
@@ -173,7 +173,6 @@ main #main_png {
 }
 #con5 ul li a::after { border-bottom: solid 1px #262626; }
 .con5_img_wrapper { height: 26.25rem; }
-/* .con5_img_wrapper img { height: 100%;  object-fit: cover;} */
 .con5_img_wrapper img { 
     height: 100%;
     width: 100%;
@@ -187,10 +186,7 @@ main #main_png {
     margin-right: 12vw;
     margin-bottom: 7.8vw;
 }
-#con6 h2 { 
-    font-size: 4.6vw; 
-    letter-spacing: -2.2px;
-}
+#con6 h2 { font-size: 4.6vw; letter-spacing: -2.2px; }
 #con6 div { width: 60vw; }
 
 
@@ -259,11 +255,7 @@ footer #f_row_top { gap: 0; padding: 4rem 4vw; }
 
 /* f_row_top style sheet */
 #f_row_top #newsletter { padding-right: 7vw; }
-#newsletter > h1 {
-    font-size: 3.7vw;
-    letter-spacing: -1.8px;
-    
-}
+#newsletter > h1 { font-size: 3.7vw; letter-spacing: -1.8px; }
 #newsletter .email_wrapper { padding: 0 1rem; }
 
 #newsletter .email_wrapper input,
