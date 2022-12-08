@@ -1,0 +1,146 @@
+.home-projects[data-v-41b6255a]{
+    background-color:#fafafa;
+    background-color:var(--colors-header-grey);
+    position:relative;
+    overflow:hidden
+}
+.home-projects .home-projects-arrow[data-v-41b6255a]{
+    position:absolute;
+    top:calc(-5.09375rem + 100vh)
+}
+.home-projects .home-projects-arrow.home-projects-arrow--left[data-v-41b6255a]{
+    left:calc(50vw - 41.84375rem)
+}
+.home-projects .home-projects-arrow.home-projects-arrow--right[data-v-41b6255a]{
+    left:calc(50vw + 38.15625rem)
+}
+.home-project-images[data-v-565ea236]{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%
+}
+.home-project-images .home-project-image-wrapper[data-v-565ea236]{
+    position:absolute;
+    top:0;
+    left:0;
+    overflow:hidden
+}
+.image-wrapper[data-v-783d0c21]{
+    position:relative;
+    overflow:hidden
+}
+.image-wrapper-image[data-v-783d0c21],
+.image-wrapper-slide[data-v-783d0c21]{
+    position:absolute;width:100%;height:100%;overflow:hidden;will-change:transform
+}
+.image-wrapper-slide[data-v-783d0c21]{
+    -webkit-transform:translateX(100%);transform:translateX(100%);cursor:pointer
+}
+.image-wrapper-link[data-v-783d0c21]{
+    display:block;position:relative;width:100%;height:100%
+}
+.image-wrapper-mask[data-v-783d0c21]{
+    position:absolute;
+    width:calc(100% + .125rem);
+    height:calc(100% + .125rem);
+    top:-.0625rem;
+    will-change:transform;
+    -webkit-transform-origin:top center;
+    transform-origin:top center
+}
+.home-project-title-wrapper[data-v-b3f15d3a]{
+    position:absolute;
+    z-index:1;
+    line-height:1.18;
+    left:calc(50vw + 4.40625rem);
+    top:calc(-29.28125rem + 100vh)
+}
+.home-project-title[data-v-b3f15d3a]{
+    position:absolute;
+    top:50%;
+    left:0;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%);
+    display:none
+}
+.home-project-title.is-disabled[data-v-b3f15d3a]{ pointer-events:none }
+.home-project-title.is-visible[data-v-b3f15d3a]{ display:block }
+.home-project-description[data-v-35b0da94]{
+    position:absolute;
+    width:16.875rem;
+    left:calc(50vw - 13.75rem);
+    top:calc(-9.5625rem + 100vh)
+}
+.home-project-description .home-project-description-title[data-v-35b0da94]{
+    line-height:100%;
+    margin-bottom:15px;
+    margin-bottom:var(--margin-heading3)
+}
+.home-project-description .home-project-description-slide[data-v-35b0da94]{
+    position:absolute;
+    top:0;
+    left:0
+}
+.heading3[data-v-0fc5bbd6]{
+    font-size:1.25rem;
+    line-height:3.35;
+    letter-spacing:-.01em;
+    text-transform:uppercase;
+    font-weight:400
+}@media (max-width:1023px){
+    .heading3[data-v-0fc5bbd6]{
+        font-size:1rem
+    }
+}
+.home-project-location[data-v-528d600c]{
+    position:absolute;top:calc(-30.65625rem + 100vh);left:calc(50vw - 37.875rem)
+}
+.home-project-location .home-project-location-text[data-v-528d600c]{ 
+    line-height:100%; white-space:nowrap 
+}
+.home-project-location .home-project-location-slide[data-v-528d600c]{
+    -webkit-transform-origin:bottom left;
+    transform-origin:bottom left;
+    -webkit-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+    position:absolute;
+    top:0;
+    left:0
+}
+.arrow[data-v-571ed566]{
+    position:relative;
+    font-size:1.25rem; 
+    line-height:100%;
+    letter-spacing:-.01em;
+    text-transform:uppercase;
+    font-weight:400;
+    cursor:pointer;
+    background:none;
+    border:none;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column
+}
+.arrow .line[data-v-571ed566],
+.arrow[data-v-571ed566]{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex
+}
+.arrow .arrow-icon[data-v-571ed566]{
+    width:auto;
+    height:1rem;
+    margin-top:.5rem;
+    -ms-flex-item-align:end;
+    align-self:flex-end;
+    -webkit-transform:translateX(0);
+    transform:translateX(0)
+}
+.arrow .arrow-icon.arrow-icon--reversed[data-v-571ed566]{
+    -ms-flex-item-align:start;
+    align-self:flex-start;
+    -webkit-transform:scaleX(-1) translateX(0);transform:scaleX(-1) translateX(0)
+}

@@ -9,7 +9,7 @@ header #logo_img_mini {display: block !important;}
 header .main_menu { flex-direction: row-reverse; }
 header .main_menu nav { display: none !important; }
 
-header .main_menu .main_icon button .fa-bars {display: block;}
+header .main_menu .main_icon button .fa-bars { display: block; }
 
 header .main_menu .main_icon button:first-child { padding-right: 3.65vw; }
 header .main_menu .main_icon button .fa-cart-shopping { padding-right: 3.65vw; }
@@ -37,6 +37,7 @@ header.scrolled {height: 3.375rem; }
 #cart_list img { width: 100%; }
 #cart_list_btn { height: 2rem;  }
 #cart_buy { padding: 4vw; }
+
 
 /* mobile_menu */
 #mobile_menu {
@@ -86,45 +87,45 @@ header.scrolled {height: 3.375rem; }
 #main_con { 
     padding: 6rem 11.5vw 4rem; 
     background-image: url(../img/main/main-mobile-bg.jpg);
+    background-position: right;
 }
 main .title_row > span, 
 main .title_row a { display: none; }
-main .main_title_text { font-size: 19vw;   letter-spacing: -9px;}
+
+main .main_title_text { font-size: 19vw;  letter-spacing: -1.6vw;}
 main #to { -webkit-text-stroke: 1px black; }
 
 main #shape { float: right; }
 
 main #main_png { 
-    width: 25vw; 
-    top: 33%;
     left: 14%;
+    top: 33%;
+    width: 25vw; 
 }
 
 main #title_mobile { 
+    color: #595959;
     display: block;
     font-size: 2vw; 
     font-weight: 500;
-    letter-spacing: -1px;
-    color: #595959;
+    letter-spacing: -0.05vw;
     padding-top: 2rem;
 }
 
 
 /* con1 style sheet*/
-#con1 p { font-size: 1.5rem; padding: 6rem 0; }
+#con1 p { 
+    font-size: 1.5rem; 
+    letter-spacing: -1.4px;
+    padding: 7rem 0; 
+}
 
 
 /* con2 style sheet*/
-#con2 { 
-    height: 50.5rem; 
-    padding: 4rem 3vw; 
-    overflow: hidden;
-    /* display:flex;
-    flex-direction: column; */
-}
+#con2 { height: 50.5rem; overflow: hidden; padding: 4rem 3vw; }
 
-#con2_img_wrapper { width: 100%; height: 100%; }
-.con2_img_silde img { width: 100%; object-fit: cover; object-position: bottom;}
+#con2_img_wrapper { height: 100%; width: 100%; }
+.con2_img_silde img { object-fit: cover; object-position: bottom; width: 100%; }
 
 #con2_img_1,
 #con2_img_3,
@@ -133,65 +134,57 @@ main #title_mobile {
 #con2 button p,
 #con2 button img,
 #con2_slogan h2
-{display: none; }
+{ display: none; }
 
-#con2 button { 
-    z-index: 800;
-}
-#con2_prev { left: 5vw; }
-#con2_next { right: 9vw; }
 
 #con2_img_2 {     
-    width: 91vw;
     height: 43.5rem;
-    right: auto;
     left: auto;
-    top: auto;
     position: static;
+    right: auto;
+    top: auto;
+    width: 91vw;
 }
 #con2_productNm {
-    top: auto;
-    /* margin-top: 3vw; */
-    left: auto;
-    width: 12rem;
-    height: 5rem;
-    overflow: hidden;
-
     display: none;
-}
-#con2_productNm a {
-    font-size: 2rem;
-    /* white-space: nowrap; */
-    transform: none;
+    height: 5rem;
+    left: auto;
+    overflow: hidden;
     top: auto;
+    width: 12rem;
 }
+#con2_productNm a { font-size: 2rem; transform: none; top: auto; }
 
 
 /* con3 : product - style sheet */
 #con3 { 
-    margin: 4rem 12.5vw; 
     display: grid;
-    grid-template-columns: 1fr;
     gap: 4rem;
+    grid-template-columns: 1fr;
+    margin: 4rem 12.5vw; 
 }
 #con3_text {
-    padding-left: 36vw;
     display: flex;
     flex-direction: column;
+    padding-left: 36vw;
 }
-#con3_text h1 { font-size: 2.5rem; letter-spacing: -2.1px; padding-right: 0; }
+#con3_text h1 { font-size: 2.25rem; letter-spacing: -2.1px; padding-right: 0; }
+#con3_text ul li { font-size: 1.125rem; margin-top: 0.75rem; }
 
-.con3_product .con3_desc { 
-    margin: 5.25vw; letter-spacing: -0.8px; gap: 1rem; 
-}
+.con3_product { grid-template-columns: none; }
+#con3_product_right { display: none; }
+
+.con3_product .con3_desc { gap: 0.5rem; margin: 0 0 5.25vw 0; }
+.con3_desc #con3_name_left { font-size: 1.125rem; }
+.con3_desc #con3_price_left { letter-spacing: -0.25px }
 
 
 /* con4 : recommend - style sheet */
 #con4 {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: none;
-    padding-top: 4rem;
     background-color: rgb(236, 232, 222);
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 4rem;
 }
 .con4_art h2 { 
     font-size: 2rem;
@@ -199,14 +192,13 @@ main #title_mobile {
     padding-bottom: 3rem;
 }
 .con4_art p { 
+    -webkit-line-clamp: 2;
     font-size: 1rem; 
     letter-spacing: -0.8px;
-    -webkit-line-clamp: 2;
 }
-.con4_art button{ 
-    width: 15rem; height: 2.5rem; 
-    margin-bottom: 4rem;
-}
+.con4_art button { height: 3rem; margin-bottom: 4rem; width: 15rem; }
+.con4_art button:hover { background-color: #f9f8f2; }
+
 #con4_art_1 { padding-right: 12.5vw; }
 #con4_art_1 h2, 
 #con4_art_1 p, 
@@ -215,17 +207,17 @@ main #title_mobile {
 #con4_art_2 h2 { margin-left: 25vw; }
 #con4_art_2 p, 
 #con4_art_2 button { 
-    margin-right: 12.5vw; 
     margin-left: 16.5vw;
+    margin-right: 12.5vw; 
 }
-#con4_art_2 img { margin-left: 12.5vw; margin-bottom: 3rem; }
+#con4_art_2 img { margin-bottom: 3rem; margin-left: 12.5vw; }
 
 
 /* con5 : new arrival - style sheet */
 #con5 { 
+    display: block;
     margin-bottom: 0; 
     padding: 4rem 0; 
-    display: block;
 }
 .con5_img_wrapper { display: none; }
 
@@ -233,7 +225,8 @@ main #title_mobile {
 
 #con5 #con5_text {  margin-left: 12vw; margin-right: 10vw; }
 #con5 ul li { font-size: 1.25rem; padding-top: 0.8rem; }
-#con5 ul li small { font-size: 0.75em;  padding-left: 2vw; }
+#con5 ul li a {  padding-right: 2vw; }
+#con5 ul li small { font-size: 0.75em; }
 
 
 /* con6 : let light~ - style sheet */
@@ -242,38 +235,41 @@ main #title_mobile {
 #con6 div { width: 100vw;}
 #con6 h2 { 
     font-size: 2.5rem; 
-    text-align: left; 
     padding-top: 3rem; 
     padding-left: 3vw;
+    text-align: left; 
 }
 
 
 /* con7 : store - style sheet */
 #con7 {
-    grid-template-columns: none;
     gap: 1rem;
-    padding: 0 3vw;
+    grid-template-columns: none;
     margin-bottom: 4rem;
+    padding: 0 3vw;
 }
 #con7 #con7_store { font-size: 4rem; }
 
 
 /* con8 : designer - styler sheet */
 #con8 { 
+    gap: 2.6vw;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto repeat(3, 1fr) auto;
-    gap: 2.6vw;
     padding: 0 3vw;
     margin-bottom: 4rem;
 }
-#con8 h3 { padding-bottom: 2rem; grid-column: 1 / 3;}
-#con8_more {grid-column: 1 / 3;}
-#con8_more img { width: 10%;}
-#con8 h3 br {display: none;}
+#con8 h3 { grid-column: 1 / 3; padding-bottom: 2rem; }
+#con8 h3 br { display: none; }
+
+#con8_more { grid-column: 1 / 3; }
+#con8_more img { margin-top: 0.75rem; opacity: 1; width: 20%; }
 #con8 .con8_designers img { height: 45vw; }
 
 
 /* con9 video wrapper - style sheet */
+#con9 video { width: 150vw; }
+#con9_title img { width: 54%; }
 #con9_article_wrap { grid-template-columns: repeat(2, 1fr); }
 
 #con9_article_wrap > div { padding: 3vw; }
@@ -282,6 +278,10 @@ main #title_mobile {
 
 #con9_article_wrap div img { margin-bottom: 1.25rem; }
 #con9_article_wrap div h2 { margin-bottom: 1.25rem; }
+#con9 .con9_art_contents { padding-bottom: 2.25rem; }
+
+#con9_article_wrap div #con9_more { top: 75%; }
+#con9_article_wrap div:hover #con9_more{ top: 75%; }
 
 
 /* con10-news style sheet */
@@ -293,34 +293,34 @@ main #title_mobile {
 }
 #con10 .post_row a span:first-child { display: none; }
 #con10 .post_row a h3 { font-size: 1rem; }
-#con10 .post_row a span {font-size: 0.75rem;}
+#con10 .post_row a span { font-size: 0.75rem; }
 
 
 /* footer style sheet */
 footer #f_row_top {
+    gap: 4rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
-    gap: 4rem;
     padding: 4rem 3vw 3rem;
 }
 footer #footer_links h3 { font-size: 1rem; }
 footer #footer_links li { font-size: 0.75rem; }
 
 #f_row_top #newsletter { padding-right: 0; order: 1;}
-#newsletter > h1 { font-size: 2.25rem; padding-bottom: 1rem;}
+#newsletter > h1 { font-size: 2.25rem; padding-bottom: 1rem; }
 
 footer #f_low_bottom {
-    flex-direction: column;
-    border-top: none;
     align-items: baseline;
+    border-top: none;
+    flex-direction: column;
     padding: 0;
 }
 #f_small { padding-left: 3vw; }
 #f_low_bottom > span {
-    width: 100vw;
+    border-top: 1px solid #b5b5b5;
+    font-size: 7.8vw;
     margin-top: 3rem;
     padding: 1rem 0;
-    border-top: 1px solid #b5b5b5;
     text-align: center;
-    font-size: 7.8vw;
+    width: 100vw;
 }
